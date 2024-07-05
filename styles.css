@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow: hidden;
 } 
 body {
     background-color: rgb(48, 46, 43);
@@ -39,6 +38,7 @@ input {
     caret-color: white;
     font-size: 16px;
     color: rgb(200, 200, 200);
+    font-weight: 600;
 }
 .login-details {
     display: flex;
@@ -46,37 +46,22 @@ input {
     justify-content: center;
 }
 .username-container input{
-    width: 270px;
-    padding: 10px 10px 10px 40px;
-    background-color: rgb(60, 58, 56);
     background-image: url('usericon.png');
     background-size: 34px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
 }
-.password-container {
-    position: relative;
-}
-.password-container input::placeholder {
-    font-size: 16px;
-    font-weight: 600;
-}
-.password-container input{
+.username-container input,
+.password-container input {
     width: 270px;
     padding: 10px 10px 10px 40px;
     background-color: rgb(60, 58, 56);
-    background-image: url('lockicon.png');
-    background-size: 32px;
     background-position: 0 50%;
     background-repeat: no-repeat;
 }
-.password-container input:focus {
-    outline: none;
-}
-.eyeicon-container {
-    background-image: url(eyeicon.png);
+.password-container input{
+    background-image: url('lockicon.png');
     background-size: 32px;
 }
+
 .sign-up {
     width: 400px;
     padding: 20px 0 20px 0;
