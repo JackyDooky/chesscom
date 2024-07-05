@@ -29,16 +29,15 @@ main {
     height: 575px;
     border-radius: 9px 9px 0 0;
     background-color: rgb(38, 36, 33);
-    padding: 0 40px;
+    padding: 40px 40px 0px 40px;
 }
 input {
     border: rgb(78, 78, 78) solid 1px;
     outline: none;
-    border-radius: 5px;
+    border-radius: 3px;
     caret-color: white;
     font-size: 16px;
     color: rgb(200, 200, 200);
-    font-weight: 600;
 }
 .login-details {
     display: flex;
@@ -47,21 +46,109 @@ input {
 }
 .username-container input{
     background-image: url('usericon.png');
-    background-size: 34px;
+    background-size: 26px;
+    background-position: 6px 8px;
+}
+.password-container {
+    position: relative;
+    margin-top: 15px;
 }
 .username-container input,
 .password-container input {
-    width: 270px;
+    width: 269px;
+    height: 20px;
     padding: 10px 10px 10px 40px;
     background-color: rgb(60, 58, 56);
-    background-position: 0 50%;
     background-repeat: no-repeat;
+}
+.username-container input::placeholder,
+.password-container input::placeholder {
+    font-weight: 600;
 }
 .password-container input{
     background-image: url('lockicon.png');
-    background-size: 32px;
+    background-size: 26px;
+    background-position: 6px 8px;
 }
-
+.authentication {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+#eye-button {
+    width: 40px;
+    height: 38px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    border: none;
+    background-color: rgb(60, 58, 56);
+    background-image: url('eyeicon-removebg-preview.png');
+    background-size: 21px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+#eye-button:hover{
+    background-image: url('eyeicon2-removebg-preview.png');
+    background-size: 21px;
+}
+#secret {
+    display: none;
+    width: 16px;
+    height: 1.3px;
+    border: rgb(60, 58, 56) 0.6px solid;
+    background-color: rgb(157, 157, 157);
+    rotate: 135deg;
+    position: absolute;
+    top: 19px;
+    right: 12px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+input[type="checkbox"] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(38, 36, 33);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    border: 1px rgb(147, 146, 145) solid;
+}
+.remember-me {
+    color: rgb(191, 191, 191);
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-bottom: 3px;
+}
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c"; /*Unicode from FontAwesome for check icon*/
+    font-weight: 900; /*Required for tick mark to appear*/
+    font-size: 12px;
+    color: rgb(38, 36, 33); 
+    position: absolute;
+    top: 5px;
+    left: 2px;
+}
+input[type="checkbox"]:checked {
+    background-color: rgb(147, 146, 145);
+    outline: none;
+}
+.forgot-password {
+    text-decoration: underline;
+    color: rgb(191, 191, 191);
+    font-size: 13px;
+    cursor: pointer;
+}
+.forgot-password:hover {
+    color: rgb(200, 200, 200);
+}
 .sign-up {
     width: 400px;
     padding: 20px 0 20px 0;
