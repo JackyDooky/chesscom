@@ -248,3 +248,8 @@ input[type="checkbox"]:checked {
 .sign-up span:hover {
     color: rgb(230, 230, 230);
 }
+@media screen and (max-width: 770px) {
+    main {
+        padding: 15px 15px 0 15px;
+    }
+  }
